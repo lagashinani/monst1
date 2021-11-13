@@ -1,27 +1,25 @@
+package ru.netology
+
 import org.junit.Test
 
 import org.junit.Assert.*
-import ru.netology.payAdditional
 
-class MainKtTestForVkPay {
+class MainKtTestFoViza {
 
     @Test
-    fun payAdditional_shouldReturnForVkPay() {
+    fun payAdditional_shouldReturnForVkPayViza() {
         //arrange
-        val cardType = "Vk Pay"
-        val amount = 20000
-        val transferBefore = 0
-
+        val cardType = "Viza"
+        val amount = 30
+        val transferBefore = 45000
         //act
         val result = payAdditional(
             amount = amount,
             cardType = cardType,
             transferBefore = transferBefore
 
-
         )
         //assert
-        assertEquals(0, result)
+        assertEquals(100, result)
     }
 }
-
